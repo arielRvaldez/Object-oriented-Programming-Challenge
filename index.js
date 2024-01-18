@@ -9,10 +9,10 @@ class Svg {
         this.shapes = '';
     }
     render() {
-        return `<svg xmlns="http://www.w3.org/2000/svg" width="300" height="200" viewBox="0 0 300 200">${this.text}${this.shapes}</svg>`;
+        return `<svg xmlns="http://www.w3.org/2000/svg" width="300" height="200" viewBox="0 0 300 200">${this.shapes}${this.text}</svg>`;
     }
     setText(text,color) {
-        this.text = `<text x="150" y="125" font-size="60" text-anchor="middle" fill="${color}">${text}</text>`;
+        this.text = `<text x="150" y="125" font-size="60" text-anchor="middle" color="${color}">${text}</text>`;
     }
     setShapes(shapes) {
         this.shapes = shapes.render();
@@ -39,7 +39,7 @@ inquirer
         choices: ['circle', 'square', 'triangle'],
     },
 {
-        type: 'list',
+        type: 'input',
         name: 'shapeColor',
         message: 'What color would you like your shape to be? Enter a color (or hex code).',
     },
