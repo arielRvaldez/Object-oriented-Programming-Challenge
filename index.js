@@ -9,8 +9,6 @@ class Svg {
         this.shapes = '';
     }
     render() {
-
-    
         return `<svg xmlns="http://www.w3.org/2000/svg" width="300" height="200" viewBox="0 0 300 200">${this.text}${this.shapes}</svg>`;
     }
     setText(text,color) {
